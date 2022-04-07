@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  siscomp:
+    image: siscomp
+    volumes:
+      - ./src/getCrypto.py:/getCrypto.py
+    build:
+      context: .
+      dockerfile: ./dockerfile
