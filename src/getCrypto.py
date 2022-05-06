@@ -23,9 +23,9 @@ def main():
     ethereum = int(float(eth))
     pesos = int(arg.split(',')[0])
 
-    print(bitcoin)
-    print(ethereum)
-    print(pesos)
+    print("Valor del bitcoin en dolares = ".format(bitcoin))
+    print("Valor del ethereum en dolares = ".format(ethereum))
+    print("Valor de un dolar en pesos = ".format(pesos))
 
     # 1. open the shared library
     mylib = ctypes.CDLL("./asmlibrary.so")
@@ -38,8 +38,8 @@ def main():
     btc_a_pesos = mylib.calcular_cotizacion(bitcoin, pesos)
     eth_a_pesos = mylib.calcular_cotizacion(ethereum, pesos)
 
-    print(btc_a_pesos)
-    print(eth_a_pesos)
+    print("Valor del bitcoin en pesos = ".format(btc_a_pesos))
+    print("Valor del ethereum en pesos = ".format(eth_a_pesos))
 
 
 if __name__ == "__main__":

@@ -17,5 +17,5 @@ calcular:
 
     ; Al salir
     mov esp, ebp   ; Vuelvo el stack pointer al final stack frame anterior
-    pop ebp        ; Recupero EBP de la pila 
+    pop ebp        ; Recupero EBP de la pila
     ret
